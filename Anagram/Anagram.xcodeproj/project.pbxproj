@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB33F2C51B0A08A700BD73B8 /* wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB33F2C41B0A08A700BD73B8 /* wordlist.txt */; };
+		CB540D5D1B09E1CC00FE1BB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB540D5C1B09E1CC00FE1BB4 /* AppDelegate.m */; };
+		CB540D5F1B09E1CC00FE1BB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB540D5E1B09E1CC00FE1BB4 /* main.m */; };
+		CB540D611B09E1CC00FE1BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB540D601B09E1CC00FE1BB4 /* Images.xcassets */; };
+		CB540D641B09E1CC00FE1BB4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB540D621B09E1CC00FE1BB4 /* MainMenu.xib */; };
+		CB540D701B09E1CC00FE1BB4 /* AnagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB540D6F1B09E1CC00FE1BB4 /* AnagramTests.m */; };
+		CB540D7B1B09E29B00FE1BB4 /* AnagramHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB540D791B09E29B00FE1BB4 /* AnagramHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB540D6A1B09E1CC00FE1BB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB540D4E1B09E1CC00FE1BB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB540D551B09E1CC00FE1BB4;
+			remoteInfo = Anagram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB33F2C41B0A08A700BD73B8 /* wordlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordlist.txt; sourceTree = "<group>"; };
+		CB540D561B09E1CC00FE1BB4 /* Anagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB540D5A1B09E1CC00FE1BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB540D5B1B09E1CC00FE1BB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CB540D5C1B09E1CC00FE1BB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CB540D5E1B09E1CC00FE1BB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB540D601B09E1CC00FE1BB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB540D631B09E1CC00FE1BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CB540D691B09E1CC00FE1BB4 /* AnagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB540D6E1B09E1CC00FE1BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB540D6F1B09E1CC00FE1BB4 /* AnagramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnagramTests.m; sourceTree = "<group>"; };
+		CB540D791B09E29B00FE1BB4 /* AnagramHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnagramHelper.m; sourceTree = "<group>"; };
+		CB540D7A1B09E29B00FE1BB4 /* AnagramHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnagramHelper.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB540D531B09E1CC00FE1BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB540D661B09E1CC00FE1BB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB540D4D1B09E1CC00FE1BB4 = {
+			isa = PBXGroup;
+			children = (
+				CB540D581B09E1CC00FE1BB4 /* Anagram */,
+				CB540D6C1B09E1CC00FE1BB4 /* AnagramTests */,
+				CB540D571B09E1CC00FE1BB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB540D571B09E1CC00FE1BB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB540D561B09E1CC00FE1BB4 /* Anagram.app */,
+				CB540D691B09E1CC00FE1BB4 /* AnagramTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB540D581B09E1CC00FE1BB4 /* Anagram */ = {
+			isa = PBXGroup;
+			children = (
+				CB33F2C41B0A08A700BD73B8 /* wordlist.txt */,
+				CB540D5B1B09E1CC00FE1BB4 /* AppDelegate.h */,
+				CB540D5C1B09E1CC00FE1BB4 /* AppDelegate.m */,
+				CB540D601B09E1CC00FE1BB4 /* Images.xcassets */,
+				CB540D621B09E1CC00FE1BB4 /* MainMenu.xib */,
+				CB540D791B09E29B00FE1BB4 /* AnagramHelper.m */,
+				CB540D7A1B09E29B00FE1BB4 /* AnagramHelper.h */,
+				CB540D591B09E1CC00FE1BB4 /* Supporting Files */,
+			);
+			path = Anagram;
+			sourceTree = "<group>";
+		};
+		CB540D591B09E1CC00FE1BB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB540D5A1B09E1CC00FE1BB4 /* Info.plist */,
+				CB540D5E1B09E1CC00FE1BB4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB540D6C1B09E1CC00FE1BB4 /* AnagramTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB540D6F1B09E1CC00FE1BB4 /* AnagramTests.m */,
+				CB540D6D1B09E1CC00FE1BB4 /* Supporting Files */,
+			);
+			path = AnagramTests;
+			sourceTree = "<group>";
+		};
+		CB540D6D1B09E1CC00FE1BB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB540D6E1B09E1CC00FE1BB4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB540D551B09E1CC00FE1BB4 /* Anagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB540D731B09E1CC00FE1BB4 /* Build configuration list for PBXNativeTarget "Anagram" */;
+			buildPhases = (
+				CB540D521B09E1CC00FE1BB4 /* Sources */,
+				CB540D531B09E1CC00FE1BB4 /* Frameworks */,
+				CB540D541B09E1CC00FE1BB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anagram;
+			productName = Anagram;
+			productReference = CB540D561B09E1CC00FE1BB4 /* Anagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB540D681B09E1CC00FE1BB4 /* AnagramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB540D761B09E1CC00FE1BB4 /* Build configuration list for PBXNativeTarget "AnagramTests" */;
+			buildPhases = (
+				CB540D651B09E1CC00FE1BB4 /* Sources */,
+				CB540D661B09E1CC00FE1BB4 /* Frameworks */,
+				CB540D671B09E1CC00FE1BB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB540D6B1B09E1CC00FE1BB4 /* PBXTargetDependency */,
+			);
+			name = AnagramTests;
+			productName = AnagramTests;
+			productReference = CB540D691B09E1CC00FE1BB4 /* AnagramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB540D4E1B09E1CC00FE1BB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Prateek Khandelwal";
+				TargetAttributes = {
+					CB540D551B09E1CC00FE1BB4 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					CB540D681B09E1CC00FE1BB4 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = CB540D551B09E1CC00FE1BB4;
+					};
+				};
+			};
+			buildConfigurationList = CB540D511B09E1CC00FE1BB4 /* Build configuration list for PBXProject "Anagram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB540D4D1B09E1CC00FE1BB4;
+			productRefGroup = CB540D571B09E1CC00FE1BB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB540D551B09E1CC00FE1BB4 /* Anagram */,
+				CB540D681B09E1CC00FE1BB4 /* AnagramTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB540D541B09E1CC00FE1BB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB540D611B09E1CC00FE1BB4 /* Images.xcassets in Resources */,
+				CB33F2C51B0A08A700BD73B8 /* wordlist.txt in Resources */,
+				CB540D641B09E1CC00FE1BB4 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB540D671B09E1CC00FE1BB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB540D521B09E1CC00FE1BB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB540D5F1B09E1CC00FE1BB4 /* main.m in Sources */,
+				CB540D5D1B09E1CC00FE1BB4 /* AppDelegate.m in Sources */,
+				CB540D7B1B09E29B00FE1BB4 /* AnagramHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB540D651B09E1CC00FE1BB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB540D701B09E1CC00FE1BB4 /* AnagramTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB540D6B1B09E1CC00FE1BB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB540D551B09E1CC00FE1BB4 /* Anagram */;
+			targetProxy = CB540D6A1B09E1CC00FE1BB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB540D621B09E1CC00FE1BB4 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB540D631B09E1CC00FE1BB4 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB540D711B09E1CC00FE1BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CB540D721B09E1CC00FE1BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CB540D741B09E1CC00FE1BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Anagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CB540D751B09E1CC00FE1BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Anagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CB540D771B09E1CC00FE1BB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AnagramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anagram.app/Contents/MacOS/Anagram";
+			};
+			name = Debug;
+		};
+		CB540D781B09E1CC00FE1BB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AnagramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anagram.app/Contents/MacOS/Anagram";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB540D511B09E1CC00FE1BB4 /* Build configuration list for PBXProject "Anagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB540D711B09E1CC00FE1BB4 /* Debug */,
+				CB540D721B09E1CC00FE1BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB540D731B09E1CC00FE1BB4 /* Build configuration list for PBXNativeTarget "Anagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB540D741B09E1CC00FE1BB4 /* Debug */,
+				CB540D751B09E1CC00FE1BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB540D761B09E1CC00FE1BB4 /* Build configuration list for PBXNativeTarget "AnagramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB540D771B09E1CC00FE1BB4 /* Debug */,
+				CB540D781B09E1CC00FE1BB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB540D4E1B09E1CC00FE1BB4 /* Project object */;
+}
