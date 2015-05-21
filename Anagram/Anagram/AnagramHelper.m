@@ -48,21 +48,33 @@
 
 - (void)printAnagramsFromAnagramDictionary:(NSDictionary *)anagramDictionary {
   for(NSString *key in [anagramDictionary allKeys]) {
-    NSLog(@"%@", anagramDictionary[key]);
+    if ([anagramDictionary[key] count] > 1) {
+      NSLog(@"%@", anagramDictionary[key]);
+    }
   }
+}
+
+- (NSUInteger)totalAnagramsFromAnagramDictionary:(NSDictionary *)anagramDictionary {
+  NSUInteger count = 0;
+  for(NSString *key in [anagramDictionary allKeys]) {
+    if ([anagramDictionary[key] count] > 1) {
+      count++;
+    }
+  }
+  return count;
 }
 
 - (NSString *)largestAnagramFromAnagramDictionary:(NSDictionary *)anagramDictionary {
   NSString *largetAnagramString = @"";
   for(NSString *key in [anagramDictionary allKeys] ) {
-    if (largetAnagramString.length < key.length) {
+    if ([anagramDictionary[key] count] > 1 && largetAnagramString.length < key.length) {
       largetAnagramString = [anagramDictionary[key] firstObject];
     }
   }
   return largetAnagramString;
 }
 
-- (NSArray *)anagramsArrayHavingMostNumberOfWordsFromAnagramDictionary:(NSDictionary *)anagramDictionary {
+- (NSArray *)largestAnagramsArrayFromAnagramDictionary:(NSDictionary *)anagramDictionary {
   NSUInteger count = 0;
   NSArray *largestAnagramsArray = [[NSArray alloc] init];
   for(NSString *key in [anagramDictionary allKeys]) {

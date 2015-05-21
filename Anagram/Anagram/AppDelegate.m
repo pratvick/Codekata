@@ -20,17 +20,12 @@
   AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
   NSArray *wordsArray = [anagramHelper wordsFromDictionary];
   NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:wordsArray];
-  NSInteger total = 0;
-  for(NSString *key in [anagramDictionary allKeys] ) {
-    if ([anagramDictionary[key] count] > 1) {
-      total++;
-    }
-  }
-  NSLog(@"Total number of Anagrams:%ld", total);
-  NSArray *anagramsArray = [anagramHelper anagramsArrayHavingMostNumberOfWordsFromAnagramDictionary:anagramDictionary];
-  NSLog(@"%@", anagramsArray);
+  [anagramHelper printAnagramsFromAnagramDictionary:anagramDictionary];
+  NSLog(@"Total anagrams: %ld", [anagramHelper totalAnagramsFromAnagramDictionary:anagramDictionary]);
+  NSArray *anagramsArray = [anagramHelper largestAnagramsArrayFromAnagramDictionary:anagramDictionary];
+  NSLog(@"Largest anagram set: %@", anagramsArray);
   NSString *largestAnagramString = [anagramHelper largestAnagramFromAnagramDictionary:anagramDictionary];
-  NSLog(@"%@", largestAnagramString);
+  NSLog(@"Largest Anagram String: %@", largestAnagramString);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

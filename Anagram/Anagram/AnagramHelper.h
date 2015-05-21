@@ -14,8 +14,10 @@
 
 - (void)printAnagramsFromAnagramDictionary:(NSDictionary *)anagramDictionary;
 
+- (NSUInteger)totalAnagramsFromAnagramDictionary:(NSDictionary *)anagramDictionary;
+
 - (NSString *)largestAnagramFromAnagramDictionary:(NSDictionary *)anagramDictionary;
 
-- (NSArray *)anagramsArrayHavingMostNumberOfWordsFromAnagramDictionary:(NSDictionary *)anagramDictionary;
+- (NSArray *)largestAnagramsArrayFromAnagramDictionary:(NSDictionary *)anagramDictionary;
 
 @end

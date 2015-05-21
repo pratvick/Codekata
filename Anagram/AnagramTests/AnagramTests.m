@@ -26,13 +26,44 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testAnagramDictionaryFromWordsArray {
   NSArray *words = @[@"abcd", @"abc", @"adcb", @"acd", @"acb"];
   AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
   NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];
   XCTAssertEqual([anagramDictionary count], 3);
   NSArray *anagramArray = @[@"abcd", @"adcb"];
   XCTAssertEqualObjects(anagramDictionary[@"abcd"], anagramArray);
+  anagramArray = @[@"abc", @"acb"];
+  XCTAssertEqualObjects(anagramDictionary[@"abc"], anagramArray);
+  anagramArray = @[@"acd"];
+  XCTAssertEqualObjects(anagramDictionary[@"acd"], anagramArray);
+  NSArray *emptyWordsArray = @[];
+  anagramDictionary = [anagramHelper anagramDictionaryFromWords:emptyWordsArray];
+  XCTAssertEqual([anagramDictionary count], 0);
+}
+
+- (void)testTotalAnagramsFromWordsArray {
+  NSArray *words = @[@"abcd", @"adbc", @"adcb", @"abc", @"acb"];
+  AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
+  NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];
+  XCTAssertEqual([anagramHelper totalAnagramsFromAnagramDictionary:anagramDictionary], 2);
+}
+
+
+- (void)testLargestAnagramSetFromWordsArray {
+  NSArray *words = @[@"abcd", @"adbc", @"adcb", @"abc", @"acb"];
+  AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
+  NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];
+  NSArray *largestAnagramArray = [anagramHelper largestAnagramsArrayFromAnagramDictionary:anagramDictionary];
+  NSArray *anagramsArray = @[@"abcd", @"adbc", @"adcb"];
+  XCTAssertEqualObjects(largestAnagramArray, anagramsArray);
+}
+
+- (void)testLargestWordFromAllAnagramsArray {
+  NSArray *words = @[@"abcde", @"adbcef", @"adcbe", @"abc", @"acb"];
+  AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
+  NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];
+  XCTAssertEqual([anagramHelper largestAnagramFromAnagramDictionary:anagramDictionary], @"abcde");
 }
 
 @end
