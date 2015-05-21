@@ -50,7 +50,7 @@
 }
 
 
-- (void)testLargestAnagramSetFromWordsArray {
+- (void)testLargestAnagramArrayFromWordsArray {
   NSArray *words = @[@"abcd", @"adbc", @"adcb", @"abc", @"acb"];
   AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
   NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];

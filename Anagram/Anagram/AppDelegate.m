@@ -23,7 +23,7 @@
   [anagramHelper printAnagramsFromAnagramDictionary:anagramDictionary];
   NSLog(@"Total anagrams: %ld", [anagramHelper totalAnagramsFromAnagramDictionary:anagramDictionary]);
   NSArray *largestAnagramsArray = [anagramHelper largestAnagramsArrayFromAnagramDictionary:anagramDictionary];
-  NSLog(@"Largest anagrams set: %@", largestAnagramsArray);
+  NSLog(@"Largest anagrams array: %@", largestAnagramsArray);
   NSString *largestAnagramString = [anagramHelper largestAnagramFromAnagramDictionary:anagramDictionary];
   NSLog(@"Largest anagram String: %@", largestAnagramString);
 }
