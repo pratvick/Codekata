@@ -11,12 +11,11 @@
 
 @implementation AnagramHelper
 
-- (NSArray *)wordsFromDictionary {
-  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"wordlist" ofType:@"txt"];
-  NSError *error;
+- (NSArray *)wordsFromFileNamed:(NSString *)filename extension:(NSString *)extension {
+  NSString *filePath = [[NSBundle mainBundle] pathForResource:filename ofType:extension];
   NSString *fileContents = [NSString stringWithContentsOfFile:filePath
                                                      encoding:NSISOLatin1StringEncoding
-                                                        error:&error];
+                                                        error:nil];
   return [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 }
 

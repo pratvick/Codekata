@@ -8,7 +8,7 @@
 
 @interface AnagramHelper : NSObject
 
-- (NSArray *)wordsFromDictionary;
+- (NSArray *)wordsFromFileNamed:(NSString *)filename extension:(NSString *)extension;
 
 - (NSDictionary *)anagramDictionaryFromWords:(NSArray *)words;
 

@@ -18,14 +18,14 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
-  NSArray *wordsArray = [anagramHelper wordsFromDictionary];
+  NSArray *wordsArray = [anagramHelper wordsFromFileNamed:@"wordlist" extension:@"txt"];
   NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:wordsArray];
   [anagramHelper printAnagramsFromAnagramDictionary:anagramDictionary];
   NSLog(@"Total anagrams: %ld", [anagramHelper totalAnagramsFromAnagramDictionary:anagramDictionary]);
-  NSArray *anagramsArray = [anagramHelper largestAnagramsArrayFromAnagramDictionary:anagramDictionary];
-  NSLog(@"Largest anagram set: %@", anagramsArray);
+  NSArray *largestAnagramsArray = [anagramHelper largestAnagramsArrayFromAnagramDictionary:anagramDictionary];
+  NSLog(@"Largest anagrams set: %@", largestAnagramsArray);
   NSString *largestAnagramString = [anagramHelper largestAnagramFromAnagramDictionary:anagramDictionary];
-  NSLog(@"Largest Anagram String: %@", largestAnagramString);
+  NSLog(@"Largest anagram String: %@", largestAnagramString);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
