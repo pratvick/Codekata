@@ -21,7 +21,7 @@
 }
 
 - (NSArray *)wordsWithLength:(NSUInteger)wordLength
-fromTwoSmallerWordsConcatenationFromWordsSet:(NSSet *)wordsSet {
+fromConcatenationOfTwoSmallerWordsFromWordsSet:(NSSet *)wordsSet {
   BOOL wordFound;
   NSString *wordFirstPart;
   NSString *wordSecondPart;

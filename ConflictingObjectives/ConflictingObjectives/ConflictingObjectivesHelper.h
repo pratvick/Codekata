@@ -11,6 +11,6 @@
 - (NSSet *)wordsSetFromFileNamed:(NSString *)fileName extension:(NSString *)extension;
 
 - (NSArray *)wordsWithLength:(NSUInteger)wordLength
-fromTwoSmallerWordsConcatenationFromWordsSet:(NSSet *)wordsSet;
+fromConcatenationOfTwoSmallerWordsFromWordsSet:(NSSet *)wordsSet;
 
 @end

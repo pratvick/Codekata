@@ -20,7 +20,7 @@
   ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
   NSSet *wordsSet = [conflictingObjectivesHelper wordsSetFromFileNamed:@"wordlist" extension:@"txt"];
   NSArray *wordsArray = [conflictingObjectivesHelper wordsWithLength:6
-                        fromTwoSmallerWordsConcatenationFromWordsSet:wordsSet];
+                        fromConcatenationOfTwoSmallerWordsFromWordsSet:wordsSet];
   NSLog(@"%@", wordsArray);
 }
 
