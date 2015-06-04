@@ -27,22 +27,31 @@
 }
 
 - (void)testAnagramDictionaryFromWordsArray {
-  NSArray *words = @[@"abcd", @"abc", @"adcb", @"acd", @"acb"];
   AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
+
+  NSArray *words = @[@"abcd", @"abc", @"adcb", @"acd", @"acb"];
+
   NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];
-  XCTAssertEqual([anagramDictionary count], 3);
-  NSArray *anagramArray = @[@"abcd", @"adcb"];
-  XCTAssertEqualObjects(anagramDictionary[@"abcd"], anagramArray);
-  anagramArray = @[@"abc", @"acb"];
-  XCTAssertEqualObjects(anagramDictionary[@"abc"], anagramArray);
-  anagramArray = @[@"acd"];
-  XCTAssertEqualObjects(anagramDictionary[@"acd"], anagramArray);
+  NSArray *resultsArray = @[@[@"abcd", @"adcb"], @[@"abc", @"acb"], @[@"acd"]];
+
+  XCTAssertEqual([anagramDictionary count], [resultsArray count]);
+  XCTAssertEqualObjects(anagramDictionary[@"abcd"], resultsArray[0]);
+  XCTAssertEqualObjects(anagramDictionary[@"abc"], resultsArray[1]);
+  XCTAssertEqualObjects(anagramDictionary[@"acd"], resultsArray[2]);
+}
+
+- (void)testAnagramDictionaryFromEmptyWordsArray {
+  AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
+
   NSArray *emptyWordsArray = @[];
+  
+  NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:emptyWordsArray];
   anagramDictionary = [anagramHelper anagramDictionaryFromWords:emptyWordsArray];
+
   XCTAssertEqual([anagramDictionary count], 0);
 }
 
-- (void)testTotalAnagramsFromWordsArray {
+- (void)testAnagramsCountFromWordsArray {
   NSArray *words = @[@"abcd", @"adbc", @"adcb", @"abc", @"acb"];
   AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
   NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];
@@ -59,7 +68,7 @@
   XCTAssertEqualObjects(largestAnagramArray, anagramsArray);
 }
 
-- (void)testLargestWordFromAllAnagramsArray {
+- (void)testLargestAnagramWordFromWordsArray {
   NSArray *words = @[@"abcde", @"adbcef", @"adcbe", @"abc", @"acb"];
   AnagramHelper *anagramHelper = [[AnagramHelper alloc] init];
   NSDictionary *anagramDictionary = [anagramHelper anagramDictionaryFromWords:words];
