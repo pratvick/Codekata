@@ -18,9 +18,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
-  NSSet *wordsSet = [conflictingObjectivesHelper wordsSetFromFileNamed:@"wordlist" extension:@"txt"];
+  NSSet *wordsSet = [conflictingObjectivesHelper wordsSetFromFileNamed:@"wordlist"
+                                                             extension:@"txt"];
   NSArray *wordsArray = [conflictingObjectivesHelper wordsWithLength:6
-                        fromConcatenationOfTwoSmallerWordsFromWordsSet:wordsSet];
+                      fromConcatenationOfTwoSmallerWordsFromWordsSet:wordsSet];
   NSLog(@"%@", wordsArray);
 }
 

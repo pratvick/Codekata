@@ -26,11 +26,11 @@
     [super tearDown];
 }
 
-- (void)testWordsWithParticularLengthFromTwoSmallerWordsConcatenationFromWordsSet {
+- (void)testWordsWithLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet {
   NSSet *wordsSet = [NSSet setWithObjects:@"abcdef", @"ab", @"cdef", @"fedcba", @"fed", @"cba", nil];
   ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
   NSArray *resultantWordsArray = [conflictingObjectivesHelper wordsWithLength:6
-                                 fromTwoSmallerWordsConcatenationFromWordsSet:wordsSet];
+                               fromConcatenationOfTwoSmallerWordsFromWordsSet:wordsSet];
   NSArray *expectedWordsArray = @[@"fedcba", @"abcdef"];
   XCTAssertEqualObjects(resultantWordsArray, expectedWordsArray);
 }
