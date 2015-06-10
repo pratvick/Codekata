@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0DCB061B2846DE00DD4E35 /* NSArray+PermutationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0DCB051B2846DE00DD4E35 /* NSArray+PermutationAdditions.m */; };
 		CB7C51221B0C9CF5005DDA77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7C51211B0C9CF5005DDA77 /* AppDelegate.m */; };
 		CB7C51241B0C9CF5005DDA77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7C51231B0C9CF5005DDA77 /* main.m */; };
 		CB7C51261B0C9CF5005DDA77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7C51251B0C9CF5005DDA77 /* Images.xcassets */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB0DCB041B2846DE00DD4E35 /* NSArray+PermutationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PermutationAdditions.h"; sourceTree = "<group>"; };
+		CB0DCB051B2846DE00DD4E35 /* NSArray+PermutationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PermutationAdditions.m"; sourceTree = "<group>"; };
 		CB7C511B1B0C9CF5005DDA77 /* ConflictingObjectives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConflictingObjectives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7C511F1B0C9CF5005DDA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB7C51201B0C9CF5005DDA77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				CB7C51211B0C9CF5005DDA77 /* AppDelegate.m */,
 				CB7C51411B0C9D2D005DDA77 /* ConflictingObjectivesHelper.h */,
 				CB7C513E1B0C9D20005DDA77 /* ConflictingObjectivesHelper.m */,
+				CB0DCB041B2846DE00DD4E35 /* NSArray+PermutationAdditions.h */,
+				CB0DCB051B2846DE00DD4E35 /* NSArray+PermutationAdditions.m */,
 				CB7C51251B0C9CF5005DDA77 /* Images.xcassets */,
 				CB7C51271B0C9CF5005DDA77 /* MainMenu.xib */,
 				CB7C511E1B0C9CF5005DDA77 /* Supporting Files */,
@@ -225,6 +230,7 @@
 				CB7C51241B0C9CF5005DDA77 /* main.m in Sources */,
 				CB7C51221B0C9CF5005DDA77 /* AppDelegate.m in Sources */,
 				CB7C513F1B0C9D20005DDA77 /* ConflictingObjectivesHelper.m in Sources */,
+				CB0DCB061B2846DE00DD4E35 /* NSArray+PermutationAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +421,7 @@
 				CB7C513A1B0C9CF5005DDA77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB7C513B1B0C9CF5005DDA77 /* Build configuration list for PBXNativeTarget "ConflictingObjectivesTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +430,7 @@
 				CB7C513D1B0C9CF5005DDA77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
