@@ -8,13 +8,9 @@
 
 @interface ConflictingObjectivesHelper : NSObject
 
-@property (readonly) NSSet *wordsSet;
+- (NSArray *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet:(NSSet *)wordsSet;
 
-- (void)setupWordsSetFromFileNamed:(NSString *)fileName extension:(NSString *)extension;
-
-- (NSArray *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet;
-
-- (NSArray *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSetMostEfficient;
+- (NSArray *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsEfficientlyFromWordsSet:(NSSet *)wordsSet;
 
 - (NSArray *)wordsOfLength:(NSUInteger)length
        fromConcatenationOf:(NSUInteger)number

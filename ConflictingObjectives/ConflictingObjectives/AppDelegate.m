@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ConflictingObjectivesHelper.h"
+#import "FileReadingHelper.h"
 
 @interface AppDelegate ()
 
@@ -18,12 +19,14 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
-  [conflictingObjectivesHelper setupWordsSetFromFileNamed:@"wordlist"
-                                                extension:@"txt"];
+  FileReadingHelper *fileReadingHelper = [[FileReadingHelper alloc] init];
+  NSSet *wordsSet = [fileReadingHelper wordsSetFromFileNamed:@"wordlist" extension:@"txt"];
+  /*
   NSArray *wordsArray = [conflictingObjectivesHelper wordsOfLength:10
                                                fromConcatenationOf:4
-                                          smallerWordsFromWordsSet:conflictingObjectivesHelper.wordsSet];
+                                          smallerWordsFromWordsSet:wordsSet];
   NSLog(@"%@", wordsArray);
+   */
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
