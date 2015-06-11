@@ -43,7 +43,7 @@
 }
 
 - (void)testWordsWithLengthFromConcatenationOfNSmallerWordsFromWordsSet {
-  NSSet *wordsSet = [NSSet setWithObjects:@"abcdef", @"dc", @"cdef", @"fedcba", @"fe", @"ba", nil];
+  NSSet *wordsSet = [NSSet setWithObjects:@"fedcef", @"dc", @"dcef", @"fedcba", @"fe", @"ba", nil];
   ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
   NSArray *expectedWordsArray = @[@"fedcba"];
   NSArray *resultantWordsArray = [conflictingObjectivesHelper wordsOfLength:6

@@ -26,7 +26,7 @@
                                                fromConcatenationOf:4
                                           smallerWordsFromWordsSet:wordsSet];
   NSLog(@"%@", wordsArray);
-   */
+  */
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

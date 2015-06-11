@@ -126,8 +126,8 @@
         NSRange indexRange = NSMakeRange(previousBreakingIndex, word.length - previousBreakingIndex);
         [allPartsOfWord addObject:[word substringWithRange:indexRange]];
         BOOL wordFound = YES;
-        for (NSUInteger wordPartsIndex = 0; wordPartsIndex < [allPartsOfWord count]; wordPartsIndex++) {
-          if ([wordsSet member:allPartsOfWord[wordPartsIndex]] == nil) {
+        for (NSString *wordPart in allPartsOfWord) {
+          if ([wordsSet member:wordPart] == nil) {
             wordFound = NO;
             break;
           }
