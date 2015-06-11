@@ -8,7 +8,7 @@
 
 @interface ConflictingObjectivesHelper : NSObject
 
-- (NSArray *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet:(NSSet *)wordsSet;
+- (NSSet *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet:(NSSet *)wordsSet;
 
 - (NSArray *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsEfficientlyFromWordsSet:(NSSet *)wordsSet;
 

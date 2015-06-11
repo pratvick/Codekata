@@ -10,32 +10,30 @@
 #import <Foundation/Foundation.h>
 #import "ConflictingObjectivesHelper.h"
 #import "NSArray+PermutationAdditions.h"
+#import <TDTChocolate/TDTFoundationAdditions.h>
 
 @implementation ConflictingObjectivesHelper : NSObject
 
 /**
  Most readable code
  */
-- (NSArray *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet:(NSSet *)wordsSet {
-  NSMutableArray *wordsArray = [[NSMutableArray alloc] init];
-  for (NSString *word in wordsSet) {
+- (NSSet *)wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet:(NSSet *)wordsSet {
+  NSSet *sixLengthWordsSet = [wordsSet tdt_filteredSetUsingBlock:^BOOL(NSString *word) {
+    return(word.length == 6);
+  }];
+  NSSet *resultSet = [sixLengthWordsSet tdt_filteredSetUsingBlock:^BOOL(NSString *word){
     BOOL wordFound = NO;
-    if (word.length == 6) {
-      for (NSUInteger breakWordAtIndex = 1; breakWordAtIndex < word.length; breakWordAtIndex++) {
-        NSString *wordFirstPart = [word substringToIndex:breakWordAtIndex];
-        NSString *wordSecondPart = [word substringFromIndex:breakWordAtIndex];
-        if ([wordsSet member:wordFirstPart] != nil && [wordsSet member:wordSecondPart] != nil) {
-          wordFound = YES;
-          break;
-        }
-      }
-      if (wordFound) {
-        [wordsArray addObject:word];
-        //NSLog(@"%@ + %@ = %@", wordFirstPart, wordSecondPart, word);
+    for (NSUInteger breakWordAtIndex = 1; breakWordAtIndex < word.length; breakWordAtIndex++) {
+      NSString *wordFirstPart = [word substringToIndex:breakWordAtIndex];
+      NSString *wordSecondPart = [word substringFromIndex:breakWordAtIndex];
+      if ([wordsSet member:wordFirstPart] != nil && [wordsSet member:wordSecondPart] != nil) {
+        wordFound = YES;
+        break;
       }
     }
-  }
-  return wordsArray;
+    return wordFound;
+  }];
+  return resultSet;
 }
 
 /**

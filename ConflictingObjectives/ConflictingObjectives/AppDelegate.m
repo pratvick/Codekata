@@ -21,6 +21,8 @@
   ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
   FileReadingHelper *fileReadingHelper = [[FileReadingHelper alloc] init];
   NSSet *wordsSet = [fileReadingHelper wordsSetFromFileNamed:@"wordlist" extension:@"txt"];
+  NSSet *resultSet = [conflictingObjectivesHelper wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet:wordsSet];
+  NSLog(@"%@", resultSet);
   /*
   NSArray *wordsArray = [conflictingObjectivesHelper wordsOfLength:10
                                                fromConcatenationOf:4
