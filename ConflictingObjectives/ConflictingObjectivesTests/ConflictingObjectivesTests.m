@@ -30,6 +30,26 @@
   NSSet *wordsSet = [NSSet setWithObjects:@"abcdef", @"ab", @"cdef", @"fedcba", @"fed", @"cba", nil];
   ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
   NSArray *expectedWordsArray = @[@"fedcba", @"abcdef"];
+  NSArray *resultantWordsArray = [conflictingObjectivesHelper wordsOfLengthSixFromConcatenationOfTwoSmallerWordsFromWordsSet:wordsSet];
+  XCTAssertEqualObjects(resultantWordsArray, expectedWordsArray);
+}
+
+- (void)testWordsWithLengthSixFromConcatenationOfTwoSmallerWordsEfficientlyFromWordsSet {
+  NSSet *wordsSet = [NSSet setWithObjects:@"abcdef", @"ab", @"cdef", @"fedcba", @"fed", @"cba", nil];
+  ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
+  NSArray *expectedWordsArray = @[@"fedcba", @"abcdef"];
+  NSArray *resultantWordsArray = [conflictingObjectivesHelper wordsOfLengthSixFromConcatenationOfTwoSmallerWordsEfficientlyFromWordsSet:wordsSet];
+  XCTAssertEqualObjects(resultantWordsArray, expectedWordsArray);
+}
+
+- (void)testWordsWithLengthFromConcatenationOfNSmallerWordsFromWordsSet {
+  NSSet *wordsSet = [NSSet setWithObjects:@"abcdef", @"dc", @"cdef", @"fedcba", @"fe", @"ba", nil];
+  ConflictingObjectivesHelper *conflictingObjectivesHelper = [[ConflictingObjectivesHelper alloc] init];
+  NSArray *expectedWordsArray = @[@"fedcba"];
+  NSArray *resultantWordsArray = [conflictingObjectivesHelper wordsOfLength:6
+                                                        fromConcatenationOf:3
+                                                   smallerWordsFromWordsSet:wordsSet];
+  XCTAssertEqualObjects(resultantWordsArray, expectedWordsArray);
 }
 
 @end

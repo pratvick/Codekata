@@ -17,6 +17,8 @@
 		CB7C51401B0C9D20005DDA77 /* ConflictingObjectivesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7C513E1B0C9D20005DDA77 /* ConflictingObjectivesHelper.m */; };
 		CB7C51431B0C9D3E005DDA77 /* wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB7C51421B0C9D3E005DDA77 /* wordlist.txt */; };
 		CB7C51441B0C9D3E005DDA77 /* wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB7C51421B0C9D3E005DDA77 /* wordlist.txt */; };
+		CB8118411B2976A1002A8AB1 /* FileReadingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8118401B2976A1002A8AB1 /* FileReadingHelper.m */; };
+		CB8118421B2976A1002A8AB1 /* FileReadingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8118401B2976A1002A8AB1 /* FileReadingHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		CB7C513E1B0C9D20005DDA77 /* ConflictingObjectivesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConflictingObjectivesHelper.m; sourceTree = "<group>"; };
 		CB7C51411B0C9D2D005DDA77 /* ConflictingObjectivesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConflictingObjectivesHelper.h; sourceTree = "<group>"; };
 		CB7C51421B0C9D3E005DDA77 /* wordlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wordlist.txt; sourceTree = "<group>"; };
+		CB8118401B2976A1002A8AB1 /* FileReadingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileReadingHelper.m; sourceTree = "<group>"; };
+		CB8118431B2976C5002A8AB1 /* FileReadingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileReadingHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				CB7C51421B0C9D3E005DDA77 /* wordlist.txt */,
 				CB7C51201B0C9CF5005DDA77 /* AppDelegate.h */,
 				CB7C51211B0C9CF5005DDA77 /* AppDelegate.m */,
+				CB8118401B2976A1002A8AB1 /* FileReadingHelper.m */,
+				CB8118431B2976C5002A8AB1 /* FileReadingHelper.h */,
 				CB7C51411B0C9D2D005DDA77 /* ConflictingObjectivesHelper.h */,
 				CB7C513E1B0C9D20005DDA77 /* ConflictingObjectivesHelper.m */,
 				CB0DCB041B2846DE00DD4E35 /* NSArray+PermutationAdditions.h */,
@@ -227,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8118411B2976A1002A8AB1 /* FileReadingHelper.m in Sources */,
 				CB7C51241B0C9CF5005DDA77 /* main.m in Sources */,
 				CB7C51221B0C9CF5005DDA77 /* AppDelegate.m in Sources */,
 				CB7C513F1B0C9D20005DDA77 /* ConflictingObjectivesHelper.m in Sources */,
@@ -238,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB8118421B2976A1002A8AB1 /* FileReadingHelper.m in Sources */,
 				CB7C51401B0C9D20005DDA77 /* ConflictingObjectivesHelper.m in Sources */,
 				CB7C51351B0C9CF5005DDA77 /* ConflictingObjectivesTests.m in Sources */,
 			);
