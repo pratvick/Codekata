@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CB1220F71B2C42040065409E /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1220F61B2C42040065409E /* Rule.m */; };
 		CB1220F81B2C42040065409E /* Rule.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1220F61B2C42040065409E /* Rule.m */; };
-		CB95F40B1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */; };
-		CB95F40C1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */; };
+		CB1220FB1B2C451E0065409E /* CheckoutRules.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1220FA1B2C451E0065409E /* CheckoutRules.m */; };
+		CB1220FC1B2C451E0065409E /* CheckoutRules.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1220FA1B2C451E0065409E /* CheckoutRules.m */; };
 		CB95F40F1B2C37E900A4CEF6 /* ItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */; };
 		CB95F4101B2C37E900A4CEF6 /* ItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */; };
 		CBD4A20D1B2B06D600B3FA2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4A20C1B2B06D600B3FA2E /* AppDelegate.m */; };
@@ -34,8 +34,8 @@
 
 /* Begin PBXFileReference section */
 		CB1220F61B2C42040065409E /* Rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rule.m; sourceTree = "<group>"; };
-		CB95F4091B2C375700A4CEF6 /* CheckoutRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckoutRules.h; path = ../CheckoutRules.h; sourceTree = "<group>"; };
-		CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckoutRules.m; path = ../CheckoutRules.m; sourceTree = "<group>"; };
+		CB1220F91B2C450B0065409E /* CheckoutRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutRules.h; sourceTree = "<group>"; };
+		CB1220FA1B2C451E0065409E /* CheckoutRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutRules.m; sourceTree = "<group>"; };
 		CB95F40D1B2C37CB00A4CEF6 /* ItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemInfo.h; sourceTree = "<group>"; };
 		CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemInfo.m; sourceTree = "<group>"; };
 		CB95F4111B2C386900A4CEF6 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rule.h; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 				CB1220F61B2C42040065409E /* Rule.m */,
 				CB95F40D1B2C37CB00A4CEF6 /* ItemInfo.h */,
 				CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */,
-				CB95F4091B2C375700A4CEF6 /* CheckoutRules.h */,
-				CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */,
+				CB1220F91B2C450B0065409E /* CheckoutRules.h */,
+				CB1220FA1B2C451E0065409E /* CheckoutRules.m */,
 				CBD4A22D1B2B1D7C00B3FA2E /* Checkout.h */,
 				CBD4A22E1B2B1D9400B3FA2E /* Checkout.m */,
 				CBD4A2101B2B06D600B3FA2E /* Images.xcassets */,
@@ -238,8 +238,8 @@
 				CBD4A20F1B2B06D600B3FA2E /* main.m in Sources */,
 				CBD4A20D1B2B06D600B3FA2E /* AppDelegate.m in Sources */,
 				CBD4A22F1B2B1D9400B3FA2E /* Checkout.m in Sources */,
-				CB95F40B1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */,
 				CB1220F71B2C42040065409E /* Rule.m in Sources */,
+				CB1220FB1B2C451E0065409E /* CheckoutRules.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +249,9 @@
 			files = (
 				CB1220F81B2C42040065409E /* Rule.m in Sources */,
 				CB95F4101B2C37E900A4CEF6 /* ItemInfo.m in Sources */,
+				CB1220FC1B2C451E0065409E /* CheckoutRules.m in Sources */,
 				CBD4A2201B2B06D600B3FA2E /* SupermarketTests.m in Sources */,
 				CBD4A2301B2B1D9400B3FA2E /* Checkout.m in Sources */,
-				CB95F40C1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
