@@ -8,19 +8,25 @@
 
 #import <Foundation/Foundation.h>
 #import "ItemInfo.h"
+#import "Rule.h"
 
 @implementation ItemInfo
 
 - (instancetype)init {
-  self.price = 0;
-  self.rule.price = self.price;
-  self.rule.quantity = 1;
+  self = [super init];
+  if (self) {
+    _price = 0;
+    _rule = [[Rule alloc] initWithQuantity:1 price:_price];
+  }
   return self;
 }
 
 - (instancetype)initWithPrice:(NSUInteger)price rule:(Rule *)rule {
-  self.price = price;
-  self.rule = rule;
+  self = [super init];
+  if (self) {
+    _price = price;
+    _rule = rule;
+  }
   return self;
 }
 

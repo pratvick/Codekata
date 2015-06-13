@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CheckoutRules.h"
 #import "Checkout.h"
+#import "Rule.h"
 
 @interface AppDelegate ()
 
@@ -19,16 +20,17 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   CheckoutRules *checkoutRules = [[CheckoutRules alloc] init];
-  [checkoutRules addItem:@"A" withPrice:10];
-  [checkoutRules addItem:@"B" withPrice:20];
-  [checkoutRules addItem:@"C" withPrice:30];
-  [checkoutRules addItem:@"D" withPrice:40];
+  [checkoutRules addItem:@"A" withPrice:50 rule:[[Rule alloc] initWithQuantity:3 price:130]];
+  [checkoutRules addItem:@"B" withPrice:30 rule:[[Rule alloc] initWithQuantity:2 price:45]];
+  [checkoutRules addItem:@"C" withPrice:20];
+  [checkoutRules addItem:@"D" withPrice:15];
   Checkout *checkout = [[Checkout alloc] initWithCheckoutRules:checkoutRules];
+  [checkout scanItem:@"D"];
   [checkout scanItem:@"A"];
   [checkout scanItem:@"B"];
-  [checkout scanItem:@"C"];
   [checkout scanItem:@"A"];
-  [checkout scanItem:@"D"];
+  [checkout scanItem:@"B"];
+  [checkout scanItem:@"A"];
   NSLog(@"%ld", [checkout totalCost]);
 }
 

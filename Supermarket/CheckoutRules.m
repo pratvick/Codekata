@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CheckoutRules.h"
 #import "ItemInfo.h"
+#import "Rule.h"
 
 @interface CheckoutRules()
 
@@ -17,10 +18,12 @@
 @end
 
 @implementation CheckoutRules
-@synthesize rules = _rules;
 
 - (instancetype)init {
+  self = [super init];
+  if (self) {
   _rules = [[NSMutableDictionary alloc] init];
+  }
   return self;
 }
 
@@ -30,9 +33,7 @@
 }
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price {
-  Rule *rule = [[Rule alloc] init];
-  rule.quantity = 1;
-  rule.price = price;
+  Rule *rule = [[Rule alloc] initWithQuantity:1 price:price];
   [self addItem:item withPrice:price rule:rule];
 }
 

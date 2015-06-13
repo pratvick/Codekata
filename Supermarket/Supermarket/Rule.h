@@ -8,7 +8,9 @@
 
 @interface Rule : NSObject
 
-@property (assign) NSUInteger quantity;
-@property (assign) NSUInteger price;
+@property (readonly) NSUInteger quantity;
+@property (readonly) NSUInteger price;
+
+- (instancetype)initWithQuantity:(NSUInteger)quantity price:(NSUInteger)price;
 
 @end

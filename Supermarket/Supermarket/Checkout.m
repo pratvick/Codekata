@@ -12,15 +12,18 @@
 @interface Checkout()
 
 @property (nonatomic) NSMutableDictionary *items;
-@property (nonatomic) CheckoutRules *rules;
+@property (nonatomic) CheckoutRules *checkoutRules;
 
 @end
 
 @implementation Checkout
 
-- (instancetype)initWithCheckoutRules:(CheckoutRules *)rules {
-  _rules = rules;
-  _items = [[NSMutableDictionary alloc] init];
+- (instancetype)initWithCheckoutRules:(CheckoutRules *)checkoutRules {
+  self = [super init];
+  if (self) {
+    _checkoutRules = checkoutRules;
+    _items = [[NSMutableDictionary alloc] init];
+  }
   return self;
 }
 
@@ -36,7 +39,8 @@
 - (NSUInteger)totalCost {
   __block NSUInteger totalCost = 0;
   [self.items enumerateKeysAndObjectsUsingBlock:(^(id key, id obj, BOOL *stop) {
-    totalCost += [self.rules getPriceOfItem:key forQuantity:(NSUInteger)[self.items[key] integerValue]];
+    totalCost += [self.checkoutRules getPriceOfItem:key
+                                        forQuantity:(NSUInteger)[self.items[key] integerValue]];
   })];
   return totalCost;
 }
