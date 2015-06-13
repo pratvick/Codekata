@@ -53,50 +53,30 @@
   XCTAssertEqual(175, [self.checkout totalCost]);
 }
 
+- (void)testCostForItems:(NSString *)items equals:(NSUInteger)totalCost {
+  [self.checkout scanAllItems:items];
+  XCTAssertEqual(totalCost, [self.checkout totalCost]);
+  [self.checkout removeAllItems];
+}
+
 - (void)testCostingAtOnce {
   [self setupCheckoutRules];
 
-  [self.checkout scanAllItems:@""];
-  XCTAssertEqual(0, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"A"];
-  XCTAssertEqual(50, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"AB"];
-  XCTAssertEqual(80, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"CDBA"];
-  XCTAssertEqual(115, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
+  [self testCostForItems:@"" equals:0];
+  [self testCostForItems:@"A" equals:50];
+  [self testCostForItems:@"AB" equals:80];
+  [self testCostForItems:@"CDBA" equals:115];
 
-  [self.checkout scanAllItems:@"AA"];
-  XCTAssertEqual(100, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"AAA"];
-  XCTAssertEqual(130, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"AAAA"];
-  XCTAssertEqual(180, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"AAAAA"];
-  XCTAssertEqual(230, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"AAAAAA"];
-  XCTAssertEqual(260, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
+  [self testCostForItems:@"AA" equals:100];
+  [self testCostForItems:@"AAA" equals:130];
+  [self testCostForItems:@"AAAA" equals:180];
+  [self testCostForItems:@"AAAAA" equals:230];
+  [self testCostForItems:@"AAAAAA" equals:260];
 
-  [self.checkout scanAllItems:@"AAAB"];
-  XCTAssertEqual(160, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"AAABB"];
-  XCTAssertEqual(175, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"AAABBD"];
-  XCTAssertEqual(190, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
-  [self.checkout scanAllItems:@"DABABA"];
-  XCTAssertEqual(190, [self.checkout totalCost]);
-  [self.checkout clearAllItems];
+  [self testCostForItems:@"AAAB" equals:160];
+  [self testCostForItems:@"AAABB" equals:175];
+  [self testCostForItems:@"AAABBD" equals:190];
+  [self testCostForItems:@"DABABA" equals:190];
 }
 
 @end

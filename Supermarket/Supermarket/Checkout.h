@@ -16,7 +16,7 @@
 
 - (void)scanAllItems:(NSString *)item;
 
-- (void)clearAllItems;
+- (void)removeAllItems;
 
 - (NSUInteger)totalCost;
 

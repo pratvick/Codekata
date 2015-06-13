@@ -43,7 +43,7 @@
   }
 }
 
-- (void)clearAllItems {
+- (void)removeAllItems {
   [self.items removeAllObjects];
 }
 
