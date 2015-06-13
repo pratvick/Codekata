@@ -43,16 +43,12 @@
 
   [self.checkout scanSingleItem:@"A"];
   XCTAssertEqual(50, [self.checkout totalCost]);
-
   [self.checkout scanSingleItem:@"B"];
   XCTAssertEqual(80, [self.checkout totalCost]);
-
   [self.checkout scanSingleItem:@"A"];
   XCTAssertEqual(130, [self.checkout totalCost]);
-
   [self.checkout scanSingleItem:@"A"];
   XCTAssertEqual(160, [self.checkout totalCost]);
-
   [self.checkout scanSingleItem:@"B"];
   XCTAssertEqual(175, [self.checkout totalCost]);
 }
@@ -63,15 +59,12 @@
   [self.checkout scanAllItems:@""];
   XCTAssertEqual(0, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"A"];
   XCTAssertEqual(50, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"AB"];
   XCTAssertEqual(80, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"CDBA"];
   XCTAssertEqual(115, [self.checkout totalCost]);
   [self.checkout clearAllItems];
@@ -79,19 +72,15 @@
   [self.checkout scanAllItems:@"AA"];
   XCTAssertEqual(100, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"AAA"];
   XCTAssertEqual(130, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"AAAA"];
   XCTAssertEqual(180, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"AAAAA"];
   XCTAssertEqual(230, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"AAAAAA"];
   XCTAssertEqual(260, [self.checkout totalCost]);
   [self.checkout clearAllItems];
@@ -99,15 +88,12 @@
   [self.checkout scanAllItems:@"AAAB"];
   XCTAssertEqual(160, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"AAABB"];
   XCTAssertEqual(175, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"AAABBD"];
   XCTAssertEqual(190, [self.checkout totalCost]);
   [self.checkout clearAllItems];
-
   [self.checkout scanAllItems:@"DABABA"];
   XCTAssertEqual(190, [self.checkout totalCost]);
   [self.checkout clearAllItems];
