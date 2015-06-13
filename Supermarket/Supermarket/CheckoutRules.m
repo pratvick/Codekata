@@ -29,7 +29,7 @@
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price rule:(Rule *)rule {
   ItemInfo *itemInfo = [[ItemInfo alloc] initWithPrice:price rule:rule];
-  [self.rules setObject:itemInfo forKey:item];
+  self.rules[item] = itemInfo;
 }
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price {
@@ -39,9 +39,10 @@
 
 - (NSUInteger)getPriceOfItem:(NSString *)item forQuantity:(NSUInteger)quantity {
   assert(self.rules[item] != nil);
+
   ItemInfo *itemInfo = self.rules[item];
-  return ((itemInfo.price * (quantity % itemInfo.rule.quantity)) +
-          (itemInfo.rule.price * (quantity / itemInfo.rule.quantity)));
+  Rule *rule = itemInfo.rule;
+  return((itemInfo.price * (quantity % rule.quantity)) + (rule.price * (quantity / rule.quantity)));
 }
 
 @end
