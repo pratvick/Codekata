@@ -25,12 +25,19 @@
   [checkoutRules addItem:@"C" withPrice:20];
   [checkoutRules addItem:@"D" withPrice:15];
   Checkout *checkout = [[Checkout alloc] initWithCheckoutRules:checkoutRules];
-  [checkout scanItem:@"D"];
-  [checkout scanItem:@"A"];
-  [checkout scanItem:@"B"];
-  [checkout scanItem:@"A"];
-  [checkout scanItem:@"B"];
-  [checkout scanItem:@"A"];
+  /*
+  [checkout scanSingleItem:@"A"];
+  NSLog(@"%ld", [checkout totalCost]);
+  [checkout scanSingleItem:@"B"];
+  NSLog(@"%ld", [checkout totalCost]);
+  [checkout scanSingleItem:@"A"];
+  NSLog(@"%ld", [checkout totalCost]);
+  [checkout scanSingleItem:@"A"];
+  NSLog(@"%ld", [checkout totalCost]);
+  [checkout scanSingleItem:@"B"];
+  NSLog(@"%ld", [checkout totalCost]);
+   */
+  [checkout scanAllItems:@"ABAAB"];
   NSLog(@"%ld", [checkout totalCost]);
 }
 

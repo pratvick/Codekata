@@ -8,33 +8,109 @@
 
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
+#import "CheckoutRules.h"
+#import "Checkout.h"
+#import "Rule.h"
 
 @interface SupermarketTests : XCTestCase
+
+@property (nonatomic) CheckoutRules *checkoutRules;
+@property (nonatomic) Checkout *checkout;
 
 @end
 
 @implementation SupermarketTests
 
 - (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+  self.checkoutRules = [[CheckoutRules alloc] init];
+  self.checkout = [[Checkout alloc] initWithCheckoutRules:self.checkoutRules];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+  self.checkoutRules = nil;
+  self.checkout = nil;
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)setupCheckoutRules {
+  [self.checkoutRules addItem:@"A" withPrice:50 rule:[[Rule alloc] initWithQuantity:3 price:130]];
+  [self.checkoutRules addItem:@"B" withPrice:30 rule:[[Rule alloc] initWithQuantity:2 price:45]];
+  [self.checkoutRules addItem:@"C" withPrice:20];
+  [self.checkoutRules addItem:@"D" withPrice:15];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testIncrementalCosting {
+  [self setupCheckoutRules];
+
+  [self.checkout scanSingleItem:@"A"];
+  XCTAssertEqual(50, [self.checkout totalCost]);
+
+  [self.checkout scanSingleItem:@"B"];
+  XCTAssertEqual(80, [self.checkout totalCost]);
+
+  [self.checkout scanSingleItem:@"A"];
+  XCTAssertEqual(130, [self.checkout totalCost]);
+
+  [self.checkout scanSingleItem:@"A"];
+  XCTAssertEqual(160, [self.checkout totalCost]);
+
+  [self.checkout scanSingleItem:@"B"];
+  XCTAssertEqual(175, [self.checkout totalCost]);
+}
+
+- (void)testCostingAtOnce {
+  [self setupCheckoutRules];
+
+  [self.checkout scanAllItems:@""];
+  XCTAssertEqual(0, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"A"];
+  XCTAssertEqual(50, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AB"];
+  XCTAssertEqual(80, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"CDBA"];
+  XCTAssertEqual(115, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AA"];
+  XCTAssertEqual(100, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AAA"];
+  XCTAssertEqual(130, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AAAA"];
+  XCTAssertEqual(180, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AAAAA"];
+  XCTAssertEqual(230, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AAAAAA"];
+  XCTAssertEqual(260, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AAAB"];
+  XCTAssertEqual(160, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AAABB"];
+  XCTAssertEqual(175, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"AAABBD"];
+  XCTAssertEqual(190, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
+
+  [self.checkout scanAllItems:@"DABABA"];
+  XCTAssertEqual(190, [self.checkout totalCost]);
+  [self.checkout clearAllItems];
 }
 
 @end

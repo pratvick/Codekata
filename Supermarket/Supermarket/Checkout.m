@@ -27,13 +27,24 @@
   return self;
 }
 
-- (void)scanItem:(NSString *)item {
+- (void)scanSingleItem:(NSString *)item {
   if (self.items[item] == nil) {
     self.items[item] = [NSNumber numberWithInteger:1];
   } else {
     NSNumber *previousCount = self.items[item];
     self.items[item] = [NSNumber numberWithInteger:([previousCount integerValue] + 1)];
   }
+}
+
+- (void)scanAllItems:(NSString *)item {
+  for (NSUInteger index = 0; index < item.length; index++) {
+    NSRange range = {index, 1};
+    [self scanSingleItem:[item substringWithRange:range]];
+  }
+}
+
+- (void)clearAllItems {
+  [self.items removeAllObjects];
 }
 
 - (NSUInteger)totalCost {

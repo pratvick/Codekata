@@ -22,7 +22,7 @@
 - (instancetype)init {
   self = [super init];
   if (self) {
-  _rules = [[NSMutableDictionary alloc] init];
+    _rules = [[NSMutableDictionary alloc] init];
   }
   return self;
 }
