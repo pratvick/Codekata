@@ -1,0 +1,44 @@
+//
+//  Checkout.m
+//  Supermarket
+//
+//  Created by Prateek Khandelwal on 6/12/15.
+//  Copyright (c) 2015 Prateek Khandelwal. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "Checkout.h"
+
+@interface Checkout()
+
+@property (nonatomic) NSMutableDictionary *items;
+@property (nonatomic) CheckoutRules *rules;
+
+@end
+
+@implementation Checkout
+
+- (instancetype)initWithCheckoutRules:(CheckoutRules *)rules {
+  _rules = rules;
+  _items = [[NSMutableDictionary alloc] init];
+  return self;
+}
+
+- (void)scanItem:(NSString *)item {
+  if (self.items[item] == nil) {
+    self.items[item] = [NSNumber numberWithInteger:1];
+  } else {
+    NSNumber *previousCount = self.items[item];
+    self.items[item] = [NSNumber numberWithInteger:([previousCount integerValue] + 1)];
+  }
+}
+
+- (NSUInteger)totalCost {
+  __block NSUInteger totalCost = 0;
+  [self.items enumerateKeysAndObjectsUsingBlock:(^(id key, id obj, BOOL *stop) {
+    totalCost += [self.rules getPriceOfItem:key forQuantity:(NSUInteger)[self.items[key] integerValue]];
+  })];
+  return totalCost;
+}
+
+@end

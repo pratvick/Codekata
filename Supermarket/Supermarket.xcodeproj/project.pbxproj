@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB95F40B1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */; };
+		CB95F40C1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */; };
+		CB95F40F1B2C37E900A4CEF6 /* ItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */; };
+		CB95F4101B2C37E900A4CEF6 /* ItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */; };
+		CBD4A20D1B2B06D600B3FA2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4A20C1B2B06D600B3FA2E /* AppDelegate.m */; };
+		CBD4A20F1B2B06D600B3FA2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4A20E1B2B06D600B3FA2E /* main.m */; };
+		CBD4A2111B2B06D600B3FA2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD4A2101B2B06D600B3FA2E /* Images.xcassets */; };
+		CBD4A2141B2B06D600B3FA2E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD4A2121B2B06D600B3FA2E /* MainMenu.xib */; };
+		CBD4A2201B2B06D600B3FA2E /* SupermarketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4A21F1B2B06D600B3FA2E /* SupermarketTests.m */; };
+		CBD4A22F1B2B1D9400B3FA2E /* Checkout.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4A22E1B2B1D9400B3FA2E /* Checkout.m */; };
+		CBD4A2301B2B1D9400B3FA2E /* Checkout.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD4A22E1B2B1D9400B3FA2E /* Checkout.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBD4A21A1B2B06D600B3FA2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBD4A1FE1B2B06D600B3FA2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBD4A2051B2B06D600B3FA2E;
+			remoteInfo = Supermarket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB95F4091B2C375700A4CEF6 /* CheckoutRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckoutRules.h; path = ../CheckoutRules.h; sourceTree = "<group>"; };
+		CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckoutRules.m; path = ../CheckoutRules.m; sourceTree = "<group>"; };
+		CB95F40D1B2C37CB00A4CEF6 /* ItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemInfo.h; sourceTree = "<group>"; };
+		CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemInfo.m; sourceTree = "<group>"; };
+		CB95F4111B2C386900A4CEF6 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rule.h; sourceTree = "<group>"; };
+		CBD4A2061B2B06D600B3FA2E /* Supermarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Supermarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD4A20A1B2B06D600B3FA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD4A20B1B2B06D600B3FA2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CBD4A20C1B2B06D600B3FA2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CBD4A20E1B2B06D600B3FA2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBD4A2101B2B06D600B3FA2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CBD4A2131B2B06D600B3FA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CBD4A2191B2B06D600B3FA2E /* SupermarketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SupermarketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD4A21E1B2B06D600B3FA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD4A21F1B2B06D600B3FA2E /* SupermarketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupermarketTests.m; sourceTree = "<group>"; };
+		CBD4A22D1B2B1D7C00B3FA2E /* Checkout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Checkout.h; sourceTree = "<group>"; };
+		CBD4A22E1B2B1D9400B3FA2E /* Checkout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Checkout.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBD4A2031B2B06D600B3FA2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD4A2161B2B06D600B3FA2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBD4A1FD1B2B06D600B3FA2E = {
+			isa = PBXGroup;
+			children = (
+				CBD4A2081B2B06D600B3FA2E /* Supermarket */,
+				CBD4A21C1B2B06D600B3FA2E /* SupermarketTests */,
+				CBD4A2071B2B06D600B3FA2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBD4A2071B2B06D600B3FA2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBD4A2061B2B06D600B3FA2E /* Supermarket.app */,
+				CBD4A2191B2B06D600B3FA2E /* SupermarketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBD4A2081B2B06D600B3FA2E /* Supermarket */ = {
+			isa = PBXGroup;
+			children = (
+				CBD4A20B1B2B06D600B3FA2E /* AppDelegate.h */,
+				CBD4A20C1B2B06D600B3FA2E /* AppDelegate.m */,
+				CB95F4091B2C375700A4CEF6 /* CheckoutRules.h */,
+				CB95F40A1B2C377A00A4CEF6 /* CheckoutRules.m */,
+				CB95F40D1B2C37CB00A4CEF6 /* ItemInfo.h */,
+				CB95F40E1B2C37E900A4CEF6 /* ItemInfo.m */,
+				CB95F4111B2C386900A4CEF6 /* Rule.h */,
+				CBD4A22D1B2B1D7C00B3FA2E /* Checkout.h */,
+				CBD4A22E1B2B1D9400B3FA2E /* Checkout.m */,
+				CBD4A2101B2B06D600B3FA2E /* Images.xcassets */,
+				CBD4A2121B2B06D600B3FA2E /* MainMenu.xib */,
+				CBD4A2091B2B06D600B3FA2E /* Supporting Files */,
+			);
+			path = Supermarket;
+			sourceTree = "<group>";
+		};
+		CBD4A2091B2B06D600B3FA2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBD4A20A1B2B06D600B3FA2E /* Info.plist */,
+				CBD4A20E1B2B06D600B3FA2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBD4A21C1B2B06D600B3FA2E /* SupermarketTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBD4A21F1B2B06D600B3FA2E /* SupermarketTests.m */,
+				CBD4A21D1B2B06D600B3FA2E /* Supporting Files */,
+			);
+			path = SupermarketTests;
+			sourceTree = "<group>";
+		};
+		CBD4A21D1B2B06D600B3FA2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBD4A21E1B2B06D600B3FA2E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBD4A2051B2B06D600B3FA2E /* Supermarket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBD4A2231B2B06D600B3FA2E /* Build configuration list for PBXNativeTarget "Supermarket" */;
+			buildPhases = (
+				CBD4A2021B2B06D600B3FA2E /* Sources */,
+				CBD4A2031B2B06D600B3FA2E /* Frameworks */,
+				CBD4A2041B2B06D600B3FA2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Supermarket;
+			productName = Supermarket;
+			productReference = CBD4A2061B2B06D600B3FA2E /* Supermarket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBD4A2181B2B06D600B3FA2E /* SupermarketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBD4A2261B2B06D600B3FA2E /* Build configuration list for PBXNativeTarget "SupermarketTests" */;
+			buildPhases = (
+				CBD4A2151B2B06D600B3FA2E /* Sources */,
+				CBD4A2161B2B06D600B3FA2E /* Frameworks */,
+				CBD4A2171B2B06D600B3FA2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBD4A21B1B2B06D600B3FA2E /* PBXTargetDependency */,
+			);
+			name = SupermarketTests;
+			productName = SupermarketTests;
+			productReference = CBD4A2191B2B06D600B3FA2E /* SupermarketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBD4A1FE1B2B06D600B3FA2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Prateek Khandelwal";
+				TargetAttributes = {
+					CBD4A2051B2B06D600B3FA2E = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					CBD4A2181B2B06D600B3FA2E = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = CBD4A2051B2B06D600B3FA2E;
+					};
+				};
+			};
+			buildConfigurationList = CBD4A2011B2B06D600B3FA2E /* Build configuration list for PBXProject "Supermarket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBD4A1FD1B2B06D600B3FA2E;
+			productRefGroup = CBD4A2071B2B06D600B3FA2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBD4A2051B2B06D600B3FA2E /* Supermarket */,
+				CBD4A2181B2B06D600B3FA2E /* SupermarketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBD4A2041B2B06D600B3FA2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD4A2111B2B06D600B3FA2E /* Images.xcassets in Resources */,
+				CBD4A2141B2B06D600B3FA2E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD4A2171B2B06D600B3FA2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBD4A2021B2B06D600B3FA2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB95F40F1B2C37E900A4CEF6 /* ItemInfo.m in Sources */,
+				CBD4A20F1B2B06D600B3FA2E /* main.m in Sources */,
+				CBD4A20D1B2B06D600B3FA2E /* AppDelegate.m in Sources */,
+				CBD4A22F1B2B1D9400B3FA2E /* Checkout.m in Sources */,
+				CB95F40B1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD4A2151B2B06D600B3FA2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB95F4101B2C37E900A4CEF6 /* ItemInfo.m in Sources */,
+				CBD4A2201B2B06D600B3FA2E /* SupermarketTests.m in Sources */,
+				CBD4A2301B2B1D9400B3FA2E /* Checkout.m in Sources */,
+				CB95F40C1B2C377A00A4CEF6 /* CheckoutRules.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBD4A21B1B2B06D600B3FA2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBD4A2051B2B06D600B3FA2E /* Supermarket */;
+			targetProxy = CBD4A21A1B2B06D600B3FA2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBD4A2121B2B06D600B3FA2E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBD4A2131B2B06D600B3FA2E /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBD4A2211B2B06D600B3FA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CBD4A2221B2B06D600B3FA2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CBD4A2241B2B06D600B3FA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Supermarket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBD4A2251B2B06D600B3FA2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Supermarket/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CBD4A2271B2B06D600B3FA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SupermarketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Supermarket.app/Contents/MacOS/Supermarket";
+			};
+			name = Debug;
+		};
+		CBD4A2281B2B06D600B3FA2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SupermarketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Supermarket.app/Contents/MacOS/Supermarket";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBD4A2011B2B06D600B3FA2E /* Build configuration list for PBXProject "Supermarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD4A2211B2B06D600B3FA2E /* Debug */,
+				CBD4A2221B2B06D600B3FA2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBD4A2231B2B06D600B3FA2E /* Build configuration list for PBXNativeTarget "Supermarket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD4A2241B2B06D600B3FA2E /* Debug */,
+				CBD4A2251B2B06D600B3FA2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBD4A2261B2B06D600B3FA2E /* Build configuration list for PBXNativeTarget "SupermarketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBD4A2271B2B06D600B3FA2E /* Debug */,
+				CBD4A2281B2B06D600B3FA2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBD4A1FE1B2B06D600B3FA2E /* Project object */;
+}
