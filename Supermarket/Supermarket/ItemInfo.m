@@ -10,6 +10,13 @@
 #import "ItemInfo.h"
 #import "Rule.h"
 
+@interface ItemInfo()
+
+@property (readwrite) NSUInteger price;
+@property (readwrite) Rule *rule;
+
+@end
+
 @implementation ItemInfo
 
 - (instancetype)init {

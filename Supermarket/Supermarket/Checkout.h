@@ -14,7 +14,7 @@
 
 - (void)scanSingleItem:(NSString *)item;
 
-- (void)scanAllItems:(NSString *)item;
+- (void)scanAllItems:(NSString *)items;
 
 - (void)removeAllItems;
 

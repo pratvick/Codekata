@@ -10,8 +10,8 @@
 
 @interface ItemInfo : NSObject
 
-@property (nonatomic) NSUInteger price;
-@property (nonatomic) Rule *rule;
+@property (readonly) NSUInteger price;
+@property (readonly) Rule *rule;
 
 - (instancetype)init;
 

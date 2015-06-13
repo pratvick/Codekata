@@ -28,18 +28,18 @@
 }
 
 - (void)scanSingleItem:(NSString *)item {
-  if (self.items[item] == nil) {
+  NSNumber *previousCountOfItem = self.items[item];
+  if (previousCountOfItem == nil) {
     self.items[item] = [NSNumber numberWithInteger:1];
   } else {
-    NSNumber *previousCount = self.items[item];
-    self.items[item] = [NSNumber numberWithInteger:([previousCount integerValue] + 1)];
+    self.items[item] = [NSNumber numberWithInteger:([previousCountOfItem integerValue] + 1)];
   }
 }
 
-- (void)scanAllItems:(NSString *)item {
-  for (NSUInteger index = 0; index < item.length; index++) {
+- (void)scanAllItems:(NSString *)items {
+  for (NSUInteger index = 0; index < items.length; index++) {
     NSRange range = {index, 1};
-    [self scanSingleItem:[item substringWithRange:range]];
+    [self scanSingleItem:[items substringWithRange:range]];
   }
 }
 
@@ -49,7 +49,7 @@
 
 - (NSUInteger)totalCost {
   __block NSUInteger totalCost = 0;
-  [self.items enumerateKeysAndObjectsUsingBlock:(^(id key, id obj, BOOL *stop) {
+  [self.items enumerateKeysAndObjectsUsingBlock:(^(NSString *key, id obj, BOOL *stop) {
     totalCost += [self.checkoutRules getPriceOfItem:key
                                         forQuantity:(NSUInteger)[self.items[key] integerValue]];
   })];
