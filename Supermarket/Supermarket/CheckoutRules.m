@@ -28,11 +28,14 @@
 }
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price rule:(Rule *)rule {
+  assert(item != nil);
+  assert(rule != nil);
   ItemInfo *itemInfo = [[ItemInfo alloc] initWithPrice:price rule:rule];
   self.checkoutRules[item] = itemInfo;
 }
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price {
+  assert(item);
   Rule *rule = [[Rule alloc] initWithQuantity:1 price:price];
   [self addItem:item withPrice:price rule:rule];
 }
