@@ -30,16 +30,15 @@
 - (void)scanSingleItem:(NSString *)item {
   NSNumber *previousCountOfItem = self.items[item];
   if (previousCountOfItem == nil) {
-    self.items[item] = [NSNumber numberWithInteger:1];
+    self.items[item] = @1.00;
   } else {
-    self.items[item] = [NSNumber numberWithInteger:([previousCountOfItem integerValue] + 1)];
+    self.items[item] = @([previousCountOfItem doubleValue] + 1.00);
   }
 }
 
 - (void)scanAllItems:(NSString *)items {
   for (NSUInteger index = 0; index < items.length; index++) {
-    NSRange range = {index, 1};
-    [self scanSingleItem:[items substringWithRange:range]];
+    [self scanSingleItem:[items substringWithRange:(NSRange){index, 1}]];
   }
 }
 
@@ -47,13 +46,13 @@
   [self.items removeAllObjects];
 }
 
-- (NSUInteger)totalCost {
-  __block NSUInteger totalCost = 0;
+- (double)totalCost {
+  __block NSDecimalNumber *totalCost = [[NSDecimalNumber alloc] initWithDouble:0.00];
   [self.items enumerateKeysAndObjectsUsingBlock:(^(NSString *key, id obj, BOOL *stop) {
-    totalCost += [self.checkoutRules getPriceOfItem:key
-                                        forQuantity:(NSUInteger)[self.items[key] integerValue]];
+    totalCost = [totalCost decimalNumberByAdding:[self.checkoutRules getPriceOfItem:key
+                                                                        forQuantity:[self.items[key] doubleValue]]];
   })];
-  return totalCost;
+  return [totalCost doubleValue];
 }
 
 @end

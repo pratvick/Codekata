@@ -10,10 +10,10 @@
 
 @interface CheckoutRules : NSObject
 
-- (void)addItem:(NSString *)item withPrice:(NSUInteger)price rule:(Rule *)rule;
+- (void)addItem:(NSString *)item withPrice:(double)price rule:(Rule *)rule;
 
-- (void)addItem:(NSString *)item withPrice:(NSUInteger)price;
+- (void)addItem:(NSString *)item withPrice:(double)price;
 
-- (NSUInteger)getPriceOfItem:(NSString *)item forQuantity:(NSUInteger)quantity;
+- (NSDecimalNumber *)getPriceOfItem:(NSString *)item forQuantity:(double)quantity;
 
 @end

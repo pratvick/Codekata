@@ -12,14 +12,14 @@
 
 @interface ItemInfo()
 
-@property (readwrite) NSUInteger price;
+@property (readwrite) double price;
 @property (readwrite) Rule *rule;
 
 @end
 
 @implementation ItemInfo
 
-- (instancetype)initWithPrice:(NSUInteger)price rule:(Rule *)rule {
+- (instancetype)initWithPrice:(double)price rule:(Rule *)rule {
   self = [super init];
   if (self) {
     _price = price;

@@ -18,6 +18,6 @@
 
 - (void)removeAllItems;
 
-- (NSUInteger)totalCost;
+- (double)totalCost;
 
 @end

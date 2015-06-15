@@ -11,14 +11,14 @@
 
 @interface Rule()
 
-@property (readwrite) NSUInteger quantity;
-@property (readwrite) NSUInteger price;
+@property (readwrite) double quantity;
+@property (readwrite) double price;
 
 @end
 
 @implementation Rule
 
-- (instancetype)initWithQuantity:(NSUInteger)quantity price:(NSUInteger)price {
+- (instancetype)initWithQuantity:(double)quantity price:(double)price {
   self = [super init];
   if (self) {
     _quantity = quantity;

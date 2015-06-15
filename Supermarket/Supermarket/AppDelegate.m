@@ -20,14 +20,14 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
   CheckoutRules *checkoutRules = [[CheckoutRules alloc] init];
-  [checkoutRules addItem:@"A" withPrice:50 rule:[[Rule alloc] initWithQuantity:3 price:130]];
-  [checkoutRules addItem:@"B" withPrice:30 rule:[[Rule alloc] initWithQuantity:2 price:45]];
-  [checkoutRules addItem:@"C" withPrice:20];
-  [checkoutRules addItem:@"D" withPrice:15];
+  [checkoutRules addItem:@"A" withPrice:10.56 rule:[[Rule alloc] initWithQuantity:3.50 price:20.25]];
+  [checkoutRules addItem:@"B" withPrice:30.55 rule:[[Rule alloc] initWithQuantity:1.50 price:45.00]];
+  [checkoutRules addItem:@"C" withPrice:20.00];
+  [checkoutRules addItem:@"D" withPrice:15.00];
 
   Checkout *checkout = [[Checkout alloc] initWithCheckoutRules:checkoutRules];
-  [checkout scanAllItems:@"ABAAB"];
-  NSLog(@"%ld", [checkout totalCost]);
+  [checkout scanAllItems:@"AAAAAAAAAABCBBD"];
+  NSLog(@"%lf", [checkout totalCost]);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

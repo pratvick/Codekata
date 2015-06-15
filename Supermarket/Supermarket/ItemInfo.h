@@ -10,9 +10,9 @@
 
 @interface ItemInfo : NSObject
 
-@property (readonly) NSUInteger price;
+@property (readonly) double price;
 @property (readonly) Rule *rule;
 
-- (instancetype)initWithPrice:(NSUInteger)price rule:(Rule *)rule;
+- (instancetype)initWithPrice:(double)price rule:(Rule *)rule;
 
 @end
