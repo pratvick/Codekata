@@ -19,15 +19,6 @@
 
 @implementation ItemInfo
 
-- (instancetype)init {
-  self = [super init];
-  if (self) {
-    _price = 0;
-    _rule = [[Rule alloc] initWithQuantity:1 price:_price];
-  }
-  return self;
-}
-
 - (instancetype)initWithPrice:(NSUInteger)price rule:(Rule *)rule {
   self = [super init];
   if (self) {
