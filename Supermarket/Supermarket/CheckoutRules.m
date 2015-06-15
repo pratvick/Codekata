@@ -13,7 +13,7 @@
 
 @interface CheckoutRules()
 
-@property (nonatomic) NSMutableDictionary *rules;
+@property (nonatomic) NSMutableDictionary *checkoutRules;
 
 @end
 
@@ -22,14 +22,14 @@
 - (instancetype)init {
   self = [super init];
   if (self) {
-    _rules = [[NSMutableDictionary alloc] init];
+    _checkoutRules = [[NSMutableDictionary alloc] init];
   }
   return self;
 }
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price rule:(Rule *)rule {
   ItemInfo *itemInfo = [[ItemInfo alloc] initWithPrice:price rule:rule];
-  self.rules[item] = itemInfo;
+  self.checkoutRules[item] = itemInfo;
 }
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price {
@@ -38,9 +38,9 @@
 }
 
 - (NSUInteger)getPriceOfItem:(NSString *)item forQuantity:(NSUInteger)quantity {
-  assert(self.rules[item] != nil);
+  assert(self.checkoutRules[item] != nil);
 
-  ItemInfo *itemInfo = self.rules[item];
+  ItemInfo *itemInfo = self.checkoutRules[item];
   Rule *rule = itemInfo.rule;
   return((itemInfo.price * (quantity % rule.quantity)) + (rule.price * (quantity / rule.quantity)));
 }
