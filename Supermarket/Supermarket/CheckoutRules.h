@@ -10,8 +10,6 @@
 
 @interface CheckoutRules : NSObject
 
-- (instancetype)init;
-
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price rule:(Rule *)rule;
 
 - (void)addItem:(NSString *)item withPrice:(NSUInteger)price;

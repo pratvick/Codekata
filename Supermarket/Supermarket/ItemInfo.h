@@ -13,8 +13,6 @@
 @property (readonly) NSUInteger price;
 @property (readonly) Rule *rule;
 
-- (instancetype)init;
-
 - (instancetype)initWithPrice:(NSUInteger)price rule:(Rule *)rule;
 
 @end
