@@ -48,11 +48,14 @@
   NSDecimalNumber *quantityInDecimalNumber = (NSDecimalNumber *)[NSDecimalNumber numberWithDouble:quantity];
   NSDecimalNumber *rulePriceInDecimalNumber = (NSDecimalNumber *)[NSDecimalNumber numberWithDouble:itemInfo.rule.price];
   NSDecimalNumber *ruleQuantityInDecimalNumber = (NSDecimalNumber *)[NSDecimalNumber numberWithDouble:itemInfo.rule.quantity];
-  NSDecimalNumber *ruleAppliedQuantityTimes = [quantityInDecimalNumber decimalNumberByDividingBy:ruleQuantityInDecimalNumber];
-  NSDecimalNumber *ruleQuantity = [[[NSDecimalNumber alloc] initWithInt:ruleAppliedQuantityTimes.intValue] decimalNumberByMultiplyingBy:ruleQuantityInDecimalNumber];
+
+  NSDecimalNumber *timesOfRuleAppliedQuantity = [quantityInDecimalNumber decimalNumberByDividingBy:ruleQuantityInDecimalNumber];
+  NSDecimalNumber *ruleQuantity = [[[NSDecimalNumber alloc] initWithInt:timesOfRuleAppliedQuantity.intValue] decimalNumberByMultiplyingBy:ruleQuantityInDecimalNumber];
   NSDecimalNumber *remainingQuantity = [quantityInDecimalNumber decimalNumberBySubtracting:ruleQuantity];
-  NSDecimalNumber *rulePriceForItems = [rulePriceInDecimalNumber decimalNumberByMultiplyingBy:[[NSDecimalNumber alloc] initWithInt:ruleAppliedQuantityTimes.intValue]];
-  return [[priceInDecimalNumber decimalNumberByMultiplyingBy:remainingQuantity] decimalNumberByAdding:rulePriceForItems];
+
+  NSDecimalNumber *priceForRuleAppliedItems = [rulePriceInDecimalNumber decimalNumberByMultiplyingBy:[[NSDecimalNumber alloc] initWithInt:timesOfRuleAppliedQuantity.intValue]];
+  NSDecimalNumber *priceForNonRuleAppliedItems = [priceInDecimalNumber decimalNumberByMultiplyingBy:remainingQuantity];
+  return [priceForNonRuleAppliedItems decimalNumberByAdding:priceForRuleAppliedItems];
 }
 
 @end
